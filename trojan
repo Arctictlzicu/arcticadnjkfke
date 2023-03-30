@@ -9,7 +9,7 @@ proxies:
   - {name: tr.ssl.tlz.asia, server: tr.ssl.tlz.asia, port: 1231, type: trojan, password: mnRsPBuCJ9, skip-cert-verify: true, udp: true}
   - {name: tr.vm.tlz.asia, server: tr.vm.tlz.asia, port: 1231, type: trojan, password: Yw8u0GTu2Q, skip-cert-verify: true, udp: true}
   - {name: tr.amd.tlz.asia, server: tr.amd.tlz.asia, port: 1231, type: trojan, password: 4IZxnGCaLg, skip-cert-verify: true, udp: true}
-  - {name: tr.jp.tlz.asia, server: tr.jp.tlz.asia, port: 7897, type: trojan, password: b91CuCwQNf, skip-cert-verify: true, udp: true}
+  - {name: tr.jp.tlz.asia, server: tr.jp.tlz.asia, port: 1231, type: trojan, password: AAQpJnbNDs, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -3360,4 +3360,3 @@ rules:
  - IP-CIDR,101.198.192.0/19,🎯 全球直连,no-resolve
  - IP-CIDR,101.199.196.0/22,🎯 全球直连,no-resolve
  - GEOIP,CN,🎯 全球直连
- - MATCH,🐟 漏网之鱼
