@@ -11,6 +11,7 @@ proxies:
   - {name: tr.amd, server: tr.amd.tlz.asia, port: 1231, type: trojan, password: 4IZxnGCaLg, skip-cert-verify: true, udp: true}
   - {name: tr.jp, server: tr.jp.tlz.asia, port: 1231, type: trojan, password: AAQpJnbNDs, skip-cert-verify: true, udp: true}
   - {name: tr.us, server: tr.us.tlz.asia, port: 20180, type: trojan, password: NdpwZuZPIO, skip-cert-verify: true, udp: true}
+  - {name: hk.v6, server: ipv6.tlz.ink, port: 80, type: vmess, uuid: aa5b00d5-fed3-431a-f822-6a0af259b1ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: ergre}}, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -25,6 +26,7 @@ proxy-groups:
       - tr.amd
       - tr.jp
       - tr.us
+      - hk.v6
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -37,6 +39,7 @@ proxy-groups:
       - tr.amd
       - tr.jp
       - tr.us
+      - hk.v6
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -51,6 +54,7 @@ proxy-groups:
       - tr.amd
       - tr.jp
       - tr.us
+      - hk.v6
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -62,6 +66,7 @@ proxy-groups:
       - tr.amd
       - tr.jp
       - tr.us
+      - hk.v6
   - name: 🔮 负载均衡
     type: load-balance
     strategy: consistent-hashing
@@ -74,6 +79,7 @@ proxy-groups:
       - tr.amd
       - tr.jp
       - tr.us
+      - hk.v6
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -99,6 +105,7 @@ proxy-groups:
       - tr.amd
       - tr.jp
       - tr.us
+      - hk.v6
 rules:
  - DOMAIN-SUFFIX,go.com,🌍 国外媒体
  - DOMAIN-KEYWORD,abematv.akamaized.net,🌍 国外媒体
