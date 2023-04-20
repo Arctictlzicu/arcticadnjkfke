@@ -5,10 +5,9 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: tr.dns, server: tr.dns.tlz.asia, port: 1231, type: trojan, password: bHlD0P4J1B, skip-cert-verify: true, udp: true}
-  - {name: tr.ssl, server: tr.ssl.tlz.asia, port: 25657, type: trojan, password: mnRsPBuCJ9, skip-cert-verify: true, udp: true}
+  - {name: tr.dns, server: tr.dns.tlz.asia, port: 12635, type: trojan, password: mV8tjkCChK, skip-cert-verify: true, udp: true}
   - {name: tr.amd, server: tr.amd.tlz.asia, port: 1231, type: trojan, password: 4IZxnGCaLg, skip-cert-verify: true, udp: true}
-  - {name: tr.jp, server: tr.jp.tlz.asia, port: 1231, type: trojan, password: AAQpJnbNDs, skip-cert-verify: true, udp: true}
+  - {name: tr.jp, server: tr.jp.tlz.asia, port: 11265, type: trojan, password: l2d76nf3ji, skip-cert-verify: true, udp: true}
   - {name: tr.us, server: tr.us.tlz.asia, port: 20180, type: trojan, password: NdpwZuZPIO, skip-cert-verify: true, udp: true}
   - {name: hk.v6, server: xui.ssl.tlz.asia, port: 80, type: vmess, uuid: aa5b00d5-fed3-431a-f822-6a0af259b1ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: ergre}}, udp: true}
 proxy-groups:
@@ -20,7 +19,6 @@ proxy-groups:
       - 🔮 负载均衡
       - DIRECT
       - tr.dns
-      - tr.ssl
       - tr.amd
       - tr.jp
       - tr.us
@@ -32,7 +30,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - tr.dns
-      - tr.ssl
       - tr.amd
       - tr.jp
       - tr.us
@@ -46,7 +43,6 @@ proxy-groups:
       - 🔯 故障转移
       - 🔮 负载均衡
       - tr.dns
-      - tr.ssl
       - tr.amd
       - tr.jp
       - tr.us
@@ -57,7 +53,6 @@ proxy-groups:
     interval: 180
     proxies:
       - tr.dns
-      - tr.ssl
       - tr.amd
       - tr.jp
       - tr.us
@@ -69,7 +64,6 @@ proxy-groups:
     interval: 180
     proxies:
       - tr.dns
-      - tr.ssl
       - tr.amd
       - tr.jp
       - tr.us
@@ -94,7 +88,6 @@ proxy-groups:
       - 🔯 故障转移
       - 🔮 负载均衡
       - tr.dns
-      - tr.ssl
       - tr.amd
       - tr.jp
       - tr.us
