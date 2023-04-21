@@ -8,7 +8,7 @@ proxies:
   - {name: tr.dns, server: tr.dns.tlz.asia, port: 12635, type: trojan, password: mV8tjkCChK, skip-cert-verify: true, udp: true}
   - {name: tr.amd, server: tr.amd.tlz.asia, port: 54389, type: trojan, password: 4IZxnGCaLg, skip-cert-verify: true, udp: true}
   - {name: tr.jp, server: tr.jp.tlz.asia, port: 11265, type: trojan, password: l2d76nf3ji, skip-cert-verify: true, udp: true}
-  - {name: tr.us, server: tr.us.tlz.asia, port: 20180, type: trojan, password: NdpwZuZPIO, skip-cert-verify: true, udp: true}
+  - {name: tr.us, server: tr.us.tlz.asia, port: 59152, type: trojan, password: lxeCSSfICI, skip-cert-verify: true, udp: true}
   - {name: hk.v6, server: xui.ssl.tlz.asia, port: 80, type: vmess, uuid: aa5b00d5-fed3-431a-f822-6a0af259b1ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: ergre}}, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
