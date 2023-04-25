@@ -9,7 +9,10 @@ proxies:
   - {name: tr.amd, server: tr.amd.tlz.asia, port: 25376, type: trojan, password: rkB9pyJCuw, skip-cert-verify: true, udp: true}
   - {name: tr.jp, server: tr.jp.tlz.asia, port: 11265, type: trojan, password: l2d76nf3ji, skip-cert-verify: true, udp: true}
   - {name: tr.us, server: tr.us.tlz.asia, port: 59152, type: trojan, password: lxeCSSfICI, skip-cert-verify: true, udp: true}
-  - {name: hk.v6, server: xui.ssl.tlz.asia, port: 80, type: vmess, uuid: aa5b00d5-fed3-431a-f822-6a0af259b1ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: ergre}}, udp: true}
+  - {name: hk.v6, server: v6.tlz.asia, port: 80, type: vmess, uuid: aa5b00d5-fed3-431a-f822-6a0af259b1ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: hk.v6.cdn, server: ipv6.tlz.ink, port: 80, type: vmess, uuid: aa5b00d5-fed3-431a-f822-6a0af259b1ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: amd.ml, server: amd.tlz.asia, port: 13732, type: vmess, uuid: 360560f5-d28a-450e-df77-5652dc0161c8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: hh.ml, server: hh.tlz.asia, port: 8080, type: vmess, uuid: 2c009139-abbd-4be8-911f-c3ae5467b724, alterId: 0, cipher: auto, tls: false, servername: woif.10155.com}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -23,6 +26,9 @@ proxy-groups:
       - tr.jp
       - tr.us
       - hk.v6
+      - hk.v6.cdn
+      - amd.ml
+      - hh.ml
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -34,6 +40,9 @@ proxy-groups:
       - tr.jp
       - tr.us
       - hk.v6
+      - hk.v6.cdn
+      - amd.ml
+      - hh.ml
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -47,6 +56,9 @@ proxy-groups:
       - tr.jp
       - tr.us
       - hk.v6
+      - hk.v6.cdn
+      - amd.ml
+      - hh.ml
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -57,6 +69,9 @@ proxy-groups:
       - tr.jp
       - tr.us
       - hk.v6
+      - hk.v6.cdn
+      - amd.ml
+      - hh.ml
   - name: 🔮 负载均衡
     type: load-balance
     strategy: consistent-hashing
@@ -68,6 +83,9 @@ proxy-groups:
       - tr.jp
       - tr.us
       - hk.v6
+      - hk.v6.cdn
+      - amd.ml
+      - hh.ml
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -92,6 +110,9 @@ proxy-groups:
       - tr.jp
       - tr.us
       - hk.v6
+      - hk.v6.cdn
+      - amd.ml
+      - hh.ml
 rules:
  - DOMAIN-SUFFIX,go.com,🌍 国外媒体
  - DOMAIN-KEYWORD,abematv.akamaized.net,🌍 国外媒体
