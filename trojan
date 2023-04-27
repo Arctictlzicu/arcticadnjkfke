@@ -6,11 +6,12 @@ log-level: info
 external-controller: :9090
 dns:
   enable: true
-  ipv6: false
+  ipv6: true
   listen: 0.0.0.0:5300
   enhanced-mode: redir-host
   nameserver:
     - https://tlz.lol/dns-query
+    - 43.155.100.143
   fallback:
     - tls://tlz.lol:853
 proxies:
