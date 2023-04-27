@@ -5,17 +5,11 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: tr.dns, server: tr.dns.tlz.asia, port: 12635, type: trojan, password: mV8tjkCChK, skip-cert-verify: true, udp: true}
-  - {name: tr.amd, server: tr.amd.tlz.asia, port: 25376, type: trojan, password: rkB9pyJCuw, skip-cert-verify: true, udp: true}
-  - {name: tr.jp, server: tr.jp.tlz.asia, port: 11265, type: trojan, password: l2d76nf3ji, skip-cert-verify: true, udp: true}
-  - {name: tr.us, server: tr.us.tlz.asia, port: 59152, type: trojan, password: lxeCSSfICI, skip-cert-verify: true, udp: true}
-  - {name: hh, server: hh.tlz.asia, port: 43233, type: vmess, uuid: 50d6771c-0d8d-4fd9-9ed8-bcaf138ada45, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
-  - {name: hk.v6, server: v6.tlz.asia, port: 80, type: vmess, uuid: aa5b00d5-fed3-431a-f822-6a0af259b1ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
-  - {name: hk.v6.cdn, server: ipv6.tlz.ink, port: 80, type: vmess, uuid: aa5b00d5-fed3-431a-f822-6a0af259b1ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
-  - {name: amd.ml, server: amd.tlz.asia, port: 13732, type: vmess, uuid: 360560f5-d28a-450e-df77-5652dc0161c8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
-  - {name: jp.ml, server: jp.tlz.asia, port: 40525, type: vmess, uuid: 534c09ac-49d0-4163-af61-bc68edbaa2a4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
-  - {name: hh.ml, server: hh.tlz.asia, port: 8080, type: vmess, uuid: 2c009139-abbd-4be8-911f-c3ae5467b724, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
-  - {name: us.ml, server: us.tlz.asia, port: 33365, type: vmess, uuid: c54d1b59-61f8-40b6-9777-1fa6844d9027, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: dns, server: dns.tlz.asia, port: 18106, type: vmess, uuid: 9282f756-5ab5-4f07-e5ea-53dca9fd368d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: amd, server: amd.tlz.asia, port: 17404, type: vmess, uuid: da1139d3-9d80-4aa3-a080-7b89a591ff1a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: jp, server: jp.tlz.asia, port: 38692, type: vmess, uuid: 2d0f3d5c-1b7f-4e57-f9dc-ad422b20a668, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: us, server: us.tlz.asia, port: 21607, type: vmess, uuid: 0d90d4ba-895e-4f59-beb7-f85c375b4079, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: hh, server: hh.tlz.asia, port: 56529, type: vmess, uuid: c6bcaf8a-0886-46df-b946-9745e4ca9290, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -24,36 +18,22 @@ proxy-groups:
       - 🔯 故障转移
       - 🔮 负载均衡
       - DIRECT
-      - tr.dns
-      - tr.amd
-      - tr.jp
-      - tr.us
+      - dns
+      - amd
+      - jp
+      - us
       - hh
-      - hk.v6
-      - hk.v6.cdn
-      - amd.ml
-      - jp.ml
-      - hh.ml
-      - jp.ml
-      - us.ml
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - tr.dns
-      - tr.amd
-      - tr.jp
-      - tr.us
+      - dns
+      - amd
+      - jp
+      - us
       - hh
-      - hk.v6
-      - hk.v6.cdn
-      - amd.ml
-      - jp.ml
-      - hh.ml
-      - jp.ml
-      - us.ml
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -62,53 +42,32 @@ proxy-groups:
       - ♻️ 自动选择
       - 🔯 故障转移
       - 🔮 负载均衡
-      - tr.dns
-      - tr.amd
-      - tr.jp
-      - tr.us
+      - dns
+      - amd
+      - jp
+      - us
       - hh
-      - hk.v6
-      - hk.v6.cdn
-      - amd.ml
-      - jp.ml
-      - hh.ml
-      - jp.ml
-      - us.ml
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - tr.dns
-      - tr.amd
-      - tr.jp
-      - tr.us
+      - dns
+      - amd
+      - jp
+      - us
       - hh
-      - hk.v6
-      - hk.v6.cdn
-      - amd.ml
-      - jp.ml
-      - hh.ml
-      - jp.ml
-      - us.ml
   - name: 🔮 负载均衡
     type: load-balance
     strategy: consistent-hashing
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - tr.dns
-      - tr.amd
-      - tr.jp
-      - tr.us
+      - dns
+      - amd
+      - jp
+      - us
       - hh
-      - hk.v6
-      - hk.v6.cdn
-      - amd.ml
-      - jp.ml
-      - hh.ml
-      - jp.ml
-      - us.ml
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -128,18 +87,11 @@ proxy-groups:
       - ♻️ 自动选择
       - 🔯 故障转移
       - 🔮 负载均衡
-      - tr.dns
-      - tr.amd
-      - tr.jp
-      - tr.us
+      - dns
+      - amd
+      - jp
+      - us
       - hh
-      - hk.v6
-      - hk.v6.cdn
-      - amd.ml
-      - jp.ml
-      - hh.ml
-      - jp.ml
-      - us.ml
 rules:
  - DOMAIN-SUFFIX,go.com,🌍 国外媒体
  - DOMAIN-KEYWORD,abematv.akamaized.net,🌍 国外媒体
