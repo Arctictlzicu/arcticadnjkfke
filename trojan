@@ -10,6 +10,10 @@ proxies:
   - {name: jp, server: jp.tlz.asia, port: 38692, type: vmess, uuid: 2d0f3d5c-1b7f-4e57-f9dc-ad422b20a668, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
   - {name: us, server: us.tlz.asia, port: 21607, type: vmess, uuid: 0d90d4ba-895e-4f59-beb7-f85c375b4079, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
   - {name: hh, server: hh.tlz.asia, port: 56529, type: vmess, uuid: c6bcaf8a-0886-46df-b946-9745e4ca9290, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: iplc, server: iplc.tlz.asia, port: 10048, type: vmess, uuid: aa3f4f42-3c49-44f3-bd2f-77f3accb9fdf, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: v6, server: v6.tlz.asia, port: 80, type: vmess, uuid: aa5b00d5-fed3-431a-f822-6a0af259b1ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: v6-cdn, server: ipv6.tlz.asia, port: 8080, type: vmess, uuid: 80e1982d-4edf-4507-9c48-c89ab75092d7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: amd-v6, server: amd.tlz.asia, port: 14816, type: vmess, uuid: aa5b00d5-fed3-431a-f822-6a0af259b1ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -23,6 +27,10 @@ proxy-groups:
       - jp
       - us
       - hh
+      - iplc
+      - v6
+      - v6-cdn
+      - amd-v6
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -34,6 +42,10 @@ proxy-groups:
       - jp
       - us
       - hh
+      - iplc
+      - v6
+      - v6-cdn
+      - amd-v6
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -47,6 +59,10 @@ proxy-groups:
       - jp
       - us
       - hh
+      - iplc
+      - v6
+      - v6-cdn
+      - amd-v6
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -57,6 +73,10 @@ proxy-groups:
       - jp
       - us
       - hh
+      - iplc
+      - v6
+      - v6-cdn
+      - amd-v6
   - name: 🔮 负载均衡
     type: load-balance
     strategy: consistent-hashing
@@ -68,6 +88,10 @@ proxy-groups:
       - jp
       - us
       - hh
+      - iplc
+      - v6
+      - v6-cdn
+      - amd-v6
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -92,6 +116,10 @@ proxy-groups:
       - jp
       - us
       - hh
+      - iplc
+      - v6
+      - v6-cdn
+      - amd-v6
 rules:
  - DOMAIN-SUFFIX,go.com,🌍 国外媒体
  - DOMAIN-KEYWORD,abematv.akamaized.net,🌍 国外媒体
