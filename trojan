@@ -10,7 +10,7 @@ dns:
   listen: 0.0.0.0:5300
   enhanced-mode: redir-host
   nameserver:
-    - https://tlz.lol/dns-query
+    - https://tlz.plus/dns-query
     - 43.155.100.143
   fallback:
     - tls://tlz.lol:853
