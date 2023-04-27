@@ -5,9 +5,14 @@ mode: Rule
 log-level: info
 external-controller: :9090
 dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:5300
+  enhanced-mode: redir-host
   nameserver:
-    - 43.155.100.143
-  fake-ip-filter: false
+    - https://tlz.lol/dns-query
+  fallback:
+    - tls://tlz.lol:853
 proxies:
   - {name: dns, server: dns.tlz.asia, port: 18106, type: vmess, uuid: 9282f756-5ab5-4f07-e5ea-53dca9fd368d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
   - {name: amd, server: amd.tlz.asia, port: 17404, type: vmess, uuid: da1139d3-9d80-4aa3-a080-7b89a591ff1a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
