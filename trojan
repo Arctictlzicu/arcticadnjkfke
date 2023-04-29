@@ -15,15 +15,16 @@ dns:
   fallback:
     - tls://tlz.lol:853
 proxies:
-  - {name: dns, server: dns.tlz.asia, port: 18106, type: vmess, uuid: 9282f756-5ab5-4f07-e5ea-53dca9fd368d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
-  - {name: jp, server: jp.tlz.asia, port: 38692, type: vmess, uuid: 2d0f3d5c-1b7f-4e57-f9dc-ad422b20a668, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
-  - {name: us, server: us.tlz.asia, port: 21607, type: vmess, uuid: 0d90d4ba-895e-4f59-beb7-f85c375b4079, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
-  - {name: hh, server: hh.tlz.asia, port: 56529, type: vmess, uuid: c6bcaf8a-0886-46df-b946-9745e4ca9290, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
-  - {name: amd, server: amd.tlz.asia, port: 17404, type: vmess, uuid: da1139d3-9d80-4aa3-a080-7b89a591ff1a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
-  - {name: iplc, server: iplc.tlz.asia, port: 10048, type: vmess, uuid: aa3f4f42-3c49-44f3-bd2f-77f3accb9fdf, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
-  - {name: V6-HK, server: v6.tlz.asia, port: 80, type: vmess, uuid: aa5b00d5-fed3-431a-f822-6a0af259b1ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: dns-30mbps, server: dns.tlz.asia, port: 18106, type: vmess, uuid: 9282f756-5ab5-4f07-e5ea-53dca9fd368d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: jp-30mbps, server: jp.tlz.asia, port: 38692, type: vmess, uuid: 2d0f3d5c-1b7f-4e57-f9dc-ad422b20a668, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: us-1Gmbps, server: us.tlz.asia, port: 21607, type: vmess, uuid: 0d90d4ba-895e-4f59-beb7-f85c375b4079, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: hh-30mbps, server: hh.tlz.asia, port: 56529, type: vmess, uuid: c6bcaf8a-0886-46df-b946-9745e4ca9290, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: amd-100mbps, server: amd.tlz.asia, port: 17404, type: vmess, uuid: da1139d3-9d80-4aa3-a080-7b89a591ff1a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: iplc-10mbps, server: iplc.tlz.asia, port: 10048, type: vmess, uuid: aa3f4f42-3c49-44f3-bd2f-77f3accb9fdf, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: V6-HK-1Gmbps, server: v6.tlz.asia, port: 80, type: vmess, uuid: aa5b00d5-fed3-431a-f822-6a0af259b1ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
   - {name: ipv6-cdn, server: ipv6.tlz.asia, port: 8080, type: vmess, uuid: 80e1982d-4edf-4507-9c48-c89ab75092d7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
-  - {name: amd-v6, server: amd.tlz.asia, port: 14816, type: vmess, uuid: aa5b00d5-fed3-431a-f822-6a0af259b1ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: amd-v6-100mbps, server: amd.tlz.asia, port: 14816, type: vmess, uuid: aa5b00d5-fed3-431a-f822-6a0af259b1ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: hk-1G, server: hk.tlz.asia, port: 8080, type: vmess, uuid: 20bbb560-e760-4319-c191-31270343edbf, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
 proxy-groups:
   - RULE-SET, gfwlist, dnsResolve
   - RULE-SET, chnroute, direct
