@@ -21,7 +21,7 @@ proxies:
   - {name: hh-30mbps, server: hh.tlz.asia, port: 56529, type: vmess, uuid: c6bcaf8a-0886-46df-b946-9745e4ca9290, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true, weight=80}
   - {name: amd-100mbps, server: amd.tlz.asia, port: 17404, type: vmess, uuid: da1139d3-9d80-4aa3-a080-7b89a591ff1a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true, weight=90}
   - {name: iplc-10mbps, server: iplc.tlz.asia, port: 10048, type: vmess, uuid: aa3f4f42-3c49-44f3-bd2f-77f3accb9fdf, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true, weight=50}
-  - {name: V6-HK-1Gmbps, server: v6.tlz.asia, port: 80, type: vmess, uuid: aa5b00d5-fed3-431a-f822-6a0af259b1ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true, weight=90}
+  - {name: V6-1Gmbps, server: v6.tlz.asia, port: 80, type: vmess, uuid: aa5b00d5-fed3-431a-f822-6a0af259b1ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true, weight=90}
   - {name: ipv6-cdn, server: ipv6.tlz.asia, port: 8080, type: vmess, uuid: 80e1982d-4edf-4507-9c48-c89ab75092d7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true, weight=80}
   - {name: amd-v6-100mbps, server: amd.tlz.asia, port: 14816, type: vmess, uuid: aa5b00d5-fed3-431a-f822-6a0af259b1ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true, weight=90}
   - {name: hk-1G, server: hk.tlz.asia, port: 8080, type: vmess, uuid: 20bbb560-e760-4319-c191-31270343edbf, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true, weight: 100 }
@@ -44,8 +44,8 @@ proxy-groups:
       - hh-30mbps
       - amd-100mbps
       - iplc-10mbps
-      - V6-HK-1Gmbps
-      - ipv6-cdn
+      - V6-1Gmbps
+      - v6-cdn
       - amd-v6-100mbps
   - name: ♻️ 自动选择
     type: url-test
@@ -60,8 +60,8 @@ proxy-groups:
       - hh-30mbps
       - amd-100mbps
       - iplc-10mbps
-      - V6-HK-1Gmbps
-      - ipv6-cdn
+      - V6-1Gmbps
+      - v6-cdn
       - amd-v6-100mbps
   - name: 🌍 国外媒体
     type: select
@@ -78,8 +78,8 @@ proxy-groups:
       - hh-30mbps
       - amd-100mbps
       - iplc-10mbps
-      - V6-HK-1Gmbps
-      - ipv6-cdn
+      - V6-1Gmbps
+      - v6-cdn
       - amd-v6-100mbps
   - name: 🔯 故障转移
     type: fallback
@@ -93,8 +93,8 @@ proxy-groups:
       - hh-30mbps
       - amd-100mbps
       - iplc-10mbps
-      - V6-HK-1Gmbps
-      - ipv6-cdn
+      - V6-1Gmbps
+      - v6-cdn
       - amd-v6-100mbps
   - name: 🔮 负载均衡
     type: load-balance
@@ -109,8 +109,8 @@ proxy-groups:
       - hh-30mbps
       - amd-100mbps
       - iplc-10mbps
-      - V6-HK-1Gmbps
-      - ipv6-cdn
+      - V6-1Gmbps
+      - v6-cdn
       - amd-v6-100mbps
   - name: 🎯 全球直连
     type: select
@@ -138,8 +138,8 @@ proxy-groups:
       - hh-30mbps
       - amd-100mbps
       - iplc-10mbps
-      - V6-HK-1Gmbps
-      - ipv6-cdn
+      - V6-1Gmbps
+      - v6-cdn
       - amd-v6-100mbps
 rules:
  - DOMAIN-SUFFIX,go.com,🌍 国外媒体
