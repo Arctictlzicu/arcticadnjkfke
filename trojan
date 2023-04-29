@@ -24,7 +24,7 @@ proxies:
   - {name: V6-HK-1Gmbps, server: v6.tlz.asia, port: 80, type: vmess, uuid: aa5b00d5-fed3-431a-f822-6a0af259b1ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
   - {name: ipv6-cdn, server: ipv6.tlz.asia, port: 8080, type: vmess, uuid: 80e1982d-4edf-4507-9c48-c89ab75092d7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
   - {name: amd-v6-100mbps, server: amd.tlz.asia, port: 14816, type: vmess, uuid: aa5b00d5-fed3-431a-f822-6a0af259b1ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
-  - {name: hk-1G, server: hk.tlz.asia, port: 8080, type: vmess, uuid: 20bbb560-e760-4319-c191-31270343edbf, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true}
+  - {name: hk-1G, server: hk.tlz.asia, port: 8080, type: vmess, uuid: 20bbb560-e760-4319-c191-31270343edbf, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true, weight: 100 }
 proxy-groups:
   - RULE-SET, gfwlist, dnsResolve
   - RULE-SET, chnroute, direct
@@ -37,30 +37,32 @@ proxy-groups:
       - 🔯 故障转移
       - 🔮 负载均衡
       - DIRECT
-      - dns
-      - jp
-      - us
-      - hh
-      - amd
-      - iplc
-      - V6-HK
+      - hk-1G, weight=100
+      - dns-30mbps
+      - jp-30mbps
+      - us-1Gmbps
+      - hh-30mbps
+      - amd-100mbps
+      - iplc-10mbps
+      - V6-HK-1Gmbps
       - ipv6-cdn
-      - amd-v6
+      - amd-v6-100mbps
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - dns
-      - jp
-      - us
-      - hh
-      - amd
-      - iplc
-      - V6-HK
+      - hk-1G, weight=100
+      - dns-30mbps
+      - jp-30mbps
+      - us-1Gmbps
+      - hh-30mbps
+      - amd-100mbps
+      - iplc-10mbps
+      - V6-HK-1Gmbps
       - ipv6-cdn
-      - amd-v6
+      - amd-v6-100mbps
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -69,44 +71,47 @@ proxy-groups:
       - ♻️ 自动选择
       - 🔯 故障转移
       - 🔮 负载均衡
-      - dns
-      - jp
-      - us
-      - hh
-      - amd
-      - iplc
-      - V6-HK
+      - hk-1G, weight=100
+      - dns-30mbps
+      - jp-30mbps
+      - us-1Gmbps
+      - hh-30mbps
+      - amd-100mbps
+      - iplc-10mbps
+      - V6-HK-1Gmbps
       - ipv6-cdn
-      - amd-v6
+      - amd-v6-100mbps
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - dns
-      - jp
-      - us
-      - hh
-      - amd
-      - iplc
-      - V6-HK
+      - hk-1G, weight=100
+      - dns-30mbps
+      - jp-30mbps
+      - us-1Gmbps
+      - hh-30mbps
+      - amd-100mbps
+      - iplc-10mbps
+      - V6-HK-1Gmbps
       - ipv6-cdn
-      - amd-v6
+      - amd-v6-100mbps
   - name: 🔮 负载均衡
     type: load-balance
     strategy: consistent-hashing
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - dns
-      - jp
-      - us
-      - hh
-      - amd
-      - iplc
-      - V6-HK
+      - hk-1G, weight=100
+      - dns-30mbps
+      - jp-30mbps
+      - us-1Gmbps
+      - hh-30mbps
+      - amd-100mbps
+      - iplc-10mbps
+      - V6-HK-1Gmbps
       - ipv6-cdn
-      - amd-v6
+      - amd-v6-100mbps
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -126,15 +131,16 @@ proxy-groups:
       - ♻️ 自动选择
       - 🔯 故障转移
       - 🔮 负载均衡
-      - dns
-      - jp
-      - us
-      - hh
-      - amd
-      - iplc
-      - V6-HK
+      - hk-1G, weight=100
+      - dns-30mbps
+      - jp-30mbps
+      - us-1Gmbps
+      - hh-30mbps
+      - amd-100mbps
+      - iplc-10mbps
+      - V6-HK-1Gmbps
       - ipv6-cdn
-      - amd-v6
+      - amd-v6-100mbps
 rules:
  - DOMAIN-SUFFIX,go.com,🌍 国外媒体
  - DOMAIN-KEYWORD,abematv.akamaized.net,🌍 国外媒体
