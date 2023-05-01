@@ -16,8 +16,8 @@ dns:
     - tls://tlz.lol:853
 proxies:
   - {name: dns-30mbps, server: dns.tlz.asia, port: 8080, type: vmess, uuid: e4887522-fe88-43fc-d653-61060ecbf65a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true , tcp: true, weight=80}
-  - {name: jp-30mbps, server: jp.tlz.asia, port: 8080, type: vmess, uuid: e9dfb4cf-8867-418b-b099-306c1d1598d3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true , tcp: true, weight=90}
-  - {name: us-1Gmbps, server: us.tlz.asia, port: 21607, type: vmess, uuid: 0d90d4ba-895e-4f59-beb7-f85c375b4079, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true , tcp: true, weight=100}
+  - {name: jp-1G, server: jp.tlz.asia, port: 8080, type: vmess, uuid: 5f5a8719-095f-44d4-ba51-5e71def145e8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true , tcp: true, weight=90}
+  - {name: us-1G, server: us.tlz.asia, port: 21607, type: vmess, uuid: 0d90d4ba-895e-4f59-beb7-f85c375b4079, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true , tcp: true, weight=100}
   - {name: hh-30mbps, server: hh.tlz.asia, port: 56529, type: vmess, uuid: c6bcaf8a-0886-46df-b946-9745e4ca9290, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true , tcp: true, weight=80}
   - {name: amd-100mbps, server: amd.tlz.asia, port: 8080, type: vmess, uuid: c324f928-1bf2-4024-9365-47d243916e89, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true , tcp: true, weight=90}
   - {name: iplc-10mbps, server: iplc.tlz.asia, port: 10048, type: vmess, uuid: aa3f4f42-3c49-44f3-bd2f-77f3accb9fdf, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: woif.10155.com}}, udp: true , tcp: true, weight=50}
@@ -38,8 +38,8 @@ proxy-groups:
       - DIRECT
       - hk-1G
       - dns-30mbps
-      - jp-30mbps
-      - us-1Gmbps
+      - jp-1G
+      - us-1G
       - hh-30mbps
       - amd-100mbps
       - iplc-10mbps
@@ -53,8 +53,8 @@ proxy-groups:
     proxies:
       - hk-1G
       - dns-30mbps
-      - jp-30mbps
-      - us-1Gmbps
+      - jp-1G
+      - us-1G
       - hh-30mbps
       - amd-100mbps
       - iplc-10mbps
@@ -70,8 +70,8 @@ proxy-groups:
       - 🔮 负载均衡
       - hk-1G
       - dns-30mbps
-      - jp-30mbps
-      - us-1Gmbps
+      - jp-1G
+      - us-1G
       - hh-30mbps
       - amd-100mbps
       - iplc-10mbps
@@ -84,8 +84,8 @@ proxy-groups:
     proxies:
       - hk-1G
       - dns-30mbps
-      - jp-30mbps
-      - us-1Gmbps
+      - jp-1G
+      - us-1G
       - hh-30mbps
       - amd-100mbps
       - iplc-10mbps
@@ -99,8 +99,8 @@ proxy-groups:
     proxies:
       - hk-1G
       - dns-30mbps
-      - jp-30mbps
-      - us-1Gmbps
+      - jp-1G
+      - us-1G
       - hh-30mbps
       - amd-100mbps
       - iplc-10mbps
@@ -127,8 +127,8 @@ proxy-groups:
       - 🔮 负载均衡
       - hk-1G
       - dns-30mbps
-      - jp-30mbps
-      - us-1Gmbps
+      - jp-1G
+      - us-1G
       - hh-30mbps
       - amd-100mbps
       - iplc-10mbps
