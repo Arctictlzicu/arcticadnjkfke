@@ -21,7 +21,7 @@ proxies:
   - {name: jp-1G, server: jp.tlz.asia, port: 8080, type: vmess, uuid: d8e0a70f-c6b1-4a3a-eb08-b00d9c757b5f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: jp.tlz.asia}}, udp: true}
   - {name: amd-100mbps, server: amd.tlz.asia, port: 8080, type: vmess, uuid: 30fccf70-7d08-4cef-92c7-9f970bd7644a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: amd.tlz.asia}}, udp: true}
   - {name: dns-30mbps, server: dns.tlz.asia, port: 15819, type: vmess, uuid: 2a7c4f2d-3813-4e1d-b95a-191bfc37f376, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: dns.tlz.asia}}, udp: true}
-  proxy-groups:
+proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
