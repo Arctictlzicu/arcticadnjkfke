@@ -8,7 +8,6 @@ dns:
   enable: true
   ipv6: true
   listen: 0.0.0.0:5300
-  enhanced-mode: redir-host
   nameserver:
     - https://tlz.plus/dns-query
     - 43.155.100.143
@@ -20,14 +19,10 @@ proxies:
   - {name: iplc-10mbps, server: iplc.tlz.asia, port: 10048, type: vmess, uuid: aa3f4f42-3c49-44f3-bd2f-77f3accb9fdf, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shoutingtoutiao3.10010.com}}, udp: true}
   - {name: V6-1Gmbps, server: v6.tlz.asia, port: 80, type: vmess, uuid: aa5b00d5-fed3-431a-f822-6a0af259b1ba, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shoutingtoutiao3.10010.com}}, udp: true}
   - {name: amd-100mbps, server: amd.tlz.asia, port: 8080, type: vmess, uuid: c324f928-1bf2-4024-9365-47d243916e89, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shoutingtoutiao3.10010.com}}, udp: true}
-  - {name: us-1G, server: us.tlz.asia, port: 8080, type: vmess, uuid: cd331a85-faac-4e62-c44d-a67b0a1737d5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: hk-1G, server: hk.tlz.asia, port: 8080, type: vmess, uuid: ad9b8b54-f9f0-4527-a184-81e640748c37, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: jp-1G, server: jp.tlz.asia, port: 8080, type: vmess, uuid: a40a92fa-78c5-4cff-9bc6-43a0cb69e777, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: hk-1G, server: hk.tlz.asia, port: 8080, type: vmess, uuid: 2e02ca89-0c4b-4c83-8c3b-472155a80593, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shoutingtoutiao3.10010.com}}, udp: true}
+  - {name: jp-1G, server: jp.tlz.asia, port: 8080, type: vmess, uuid: ddde2b2e-5b59-4005-a4bd-3fb22efa5d29, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shoutingtoutiao3.10010.com}}, udp: true}
+  - {name: us-1G, server: us.tlz.asia, port: 8080, type: vmess, uuid: af88a359-ef7e-488d-e9f7-a263cf22bae6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shoutingtoutiao3.10010.com}}, udp: true}
 proxy-groups:
-  - RULE-SET, gfwlist, dnsResolve
-  - RULE-SET, chnroute, direct
-  - RULE-SET, all_proxy, direct
-  - MATCH, *, dnsProxy
   - name: 🚀 节点选择
     type: select
     proxies:
@@ -35,12 +30,12 @@ proxy-groups:
       - 🔯 故障转移
       - 🔮 负载均衡
       - DIRECT
-      - hk-1G
       - dns-30mbps
-      - jp-1G
-      - us-1G
+      - hk-1G
       - hh-30mbps
       - amd-100mbps
+      - jp-1G
+      - us-1G
       - iplc-10mbps
       - V6-1Gmbps
   - name: ♻️ 自动选择
@@ -49,12 +44,12 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - hk-1G
       - dns-30mbps
-      - jp-1G
-      - us-1G
+      - hk-1G
       - hh-30mbps
       - amd-100mbps
+      - jp-1G
+      - us-1G
       - iplc-10mbps
       - V6-1Gmbps
   - name: 🌍 国外媒体
@@ -65,12 +60,12 @@ proxy-groups:
       - ♻️ 自动选择
       - 🔯 故障转移
       - 🔮 负载均衡
-      - hk-1G
       - dns-30mbps
-      - jp-1G
-      - us-1G
+      - hk-1G
       - hh-30mbps
       - amd-100mbps
+      - jp-1G
+      - us-1G
       - iplc-10mbps
       - V6-1Gmbps
   - name: 🔯 故障转移
@@ -78,12 +73,12 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - hk-1G
       - dns-30mbps
-      - jp-1G
-      - us-1G
+      - hk-1G
       - hh-30mbps
       - amd-100mbps
+      - jp-1G
+      - us-1G
       - iplc-10mbps
       - V6-1Gmbps
   - name: 🔮 负载均衡
@@ -92,12 +87,12 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - hk-1G
       - dns-30mbps
-      - jp-1G
-      - us-1G
+      - hk-1G
       - hh-30mbps
       - amd-100mbps
+      - jp-1G
+      - us-1G
       - iplc-10mbps
       - V6-1Gmbps
   - name: 🎯 全球直连
@@ -119,12 +114,12 @@ proxy-groups:
       - ♻️ 自动选择
       - 🔯 故障转移
       - 🔮 负载均衡
-      - hk-1G
       - dns-30mbps
-      - jp-1G
-      - us-1G
+      - hk-1G
       - hh-30mbps
       - amd-100mbps
+      - jp-1G
+      - us-1G
       - iplc-10mbps
       - V6-1Gmbps
 rules:
