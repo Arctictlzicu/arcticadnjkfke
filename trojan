@@ -77,7 +77,7 @@ proxy-groups:
       - V6-1G
       - iplc-10mbps
   - name: 🔮 负载均衡
-    type: load-balance
+    type: url-test
     strategy: consistent-hashing
     url: http://www.gstatic.com/generate_204
     interval: 180
