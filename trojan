@@ -15,15 +15,15 @@ dns:
     - 43.155.100.143
     - https://tlz.lol/dns-query
 proxies:
-  - {name: us-1G, server: us.tlz.asia, port: 8080, type: vmess, uuid: b0eb6e30-0557-4998-e1aa-e1bdbae0d4e5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us.tlz.asia}}, udp: true}
-  - {name: us1-1G, server: us1.tlz.asia, port: 36839, type: vmess, uuid: d1921f76-4838-4db3-89a2-c8687fcf59b1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us1.tlz.asia}}, udp: true}
-  - {name: jp-1G, server: jp.tlz.asia, port: 8080, type: vmess, uuid: d8e0a70f-c6b1-4a3a-eb08-b00d9c757b5f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: jp.tlz.asia}}, udp: true}
-  - {name: hk-1G, server: hk.tlz.asia, port: 8080, type: vmess, uuid: a6a2678c-181d-47da-c1d7-4609b35028c8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: hk.tlz.asia}}, udp: true}
-  - {name: dns-30mbps, server: dns.tlz.asia, port: 15819, type: vmess, uuid: 2a7c4f2d-3813-4e1d-b95a-191bfc37f376, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: dns.tlz.asia}}, udp: true}
-  - {name: jp-us-1G, server: jp.tlz.asia, port: 12558, type: vmess, uuid: b0eb6e30-0557-4998-e1aa-e1bdbae0d4e5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us.tlz.asia}}, udp: true}
-  - {name: amd-100mbps, server: amd.tlz.asia, port: 8080, type: vmess, uuid: 30fccf70-7d08-4cef-92c7-9f970bd7644a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: amd.tlz.asia}}, udp: true} 
-  - {name: V6-1G, server: v6.tlz.asia, port: 31276, type: vmess, uuid: 82d61a7e-ca3a-4f3d-c739-e145c0a24003, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shoutingtoutiao3.10010.com}}, udp: true}
-  - {name: iplc-10mbps, server: iplc.tlz.asia, port: 10048, type: vmess, uuid: aa3f4f42-3c49-44f3-bd2f-77f3accb9fdf, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shoutingtoutiao3.10010.com}}, udp: true}
+  - {name: us-1G, server: us.tlz.asia, port: 8080, type: vmess, uuid: b0eb6e30-0557-4998-e1aa-e1bdbae0d4e5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us.tlz.asia}}, udp: true ,weight: 1}
+  - {name: us1-1G, server: us1.tlz.asia, port: 36839, type: vmess, uuid: d1921f76-4838-4db3-89a2-c8687fcf59b1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us1.tlz.asia}}, udp: true ,weight: 1}
+  - {name: jp-1G, server: jp.tlz.asia, port: 8080, type: vmess, uuid: d8e0a70f-c6b1-4a3a-eb08-b00d9c757b5f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: jp.tlz.asia}}, udp: true ,weight: 1}
+  - {name: hk-1G, server: hk.tlz.asia, port: 8080, type: vmess, uuid: a6a2678c-181d-47da-c1d7-4609b35028c8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: hk.tlz.asia}}, udp: true ,weight: 1}
+  - {name: dns-30mbps, server: dns.tlz.asia, port: 15819, type: vmess, uuid: 2a7c4f2d-3813-4e1d-b95a-191bfc37f376, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: dns.tlz.asia}}, udp: true ,weight: 2}
+  - {name: jp-us-1G, server: jp.tlz.asia, port: 12558, type: vmess, uuid: b0eb6e30-0557-4998-e1aa-e1bdbae0d4e5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us.tlz.asia}}, udp: true ,weight: 1}
+  - {name: amd-100mbps, server: amd.tlz.asia, port: 8080, type: vmess, uuid: 30fccf70-7d08-4cef-92c7-9f970bd7644a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: amd.tlz.asia}}, udp: true ,weight: 2} 
+  - {name: V6-1G, server: v6.tlz.asia, port: 31276, type: vmess, uuid: 82d61a7e-ca3a-4f3d-c739-e145c0a24003, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shoutingtoutiao3.10010.com}}, udp: true ,weight: 1}
+  - {name: iplc-10mbps, server: iplc.tlz.asia, port: 10048, type: vmess, uuid: aa3f4f42-3c49-44f3-bd2f-77f3accb9fdf, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shoutingtoutiao3.10010.com}}, udp: true,weight: 3}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
