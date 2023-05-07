@@ -10,9 +10,9 @@ dns:
   listen: 0.0.0.0:5300
   nameserver:
     - https://tlz.plus/dns-query
-    - 43.155.100.143
   fallback:
-    - tls://tlz.lol:853
+    - 43.155.100.143
+    - https://tlz.lol/dns-query
 proxies:
   - {name: us-1G, server: us.tlz.asia, port: 8080, type: vmess, uuid: b0eb6e30-0557-4998-e1aa-e1bdbae0d4e5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us.tlz.asia}}, udp: true}
   - {name: jp-1G, server: jp.tlz.asia, port: 8080, type: vmess, uuid: d8e0a70f-c6b1-4a3a-eb08-b00d9c757b5f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: jp.tlz.asia}}, udp: true}
