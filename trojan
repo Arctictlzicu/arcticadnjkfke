@@ -16,6 +16,7 @@ dns:
     - https://tlz.lol/dns-query
 proxies:
   - {name: us-1G, server: us.tlz.asia, port: 8080, type: vmess, uuid: b0eb6e30-0557-4998-e1aa-e1bdbae0d4e5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us.tlz.asia}}, udp: true}
+  - {name: us1-1G, server: us1.tlz.asia, port: 36839, type: vmess, uuid: d1921f76-4838-4db3-89a2-c8687fcf59b1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us1.tlz.asia}}, udp: true}
   - {name: jp-1G, server: jp.tlz.asia, port: 8080, type: vmess, uuid: d8e0a70f-c6b1-4a3a-eb08-b00d9c757b5f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: jp.tlz.asia}}, udp: true}
   - {name: hk-1G, server: hk.tlz.asia, port: 8080, type: vmess, uuid: a6a2678c-181d-47da-c1d7-4609b35028c8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: hk.tlz.asia}}, udp: true}
   - {name: dns-30mbps, server: dns.tlz.asia, port: 15819, type: vmess, uuid: 2a7c4f2d-3813-4e1d-b95a-191bfc37f376, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: dns.tlz.asia}}, udp: true}
