@@ -11,9 +11,10 @@ dns:
   listen: 0.0.0.0:5300
   nameserver:
     - https://tlz.plus/dns-query
+    - https://tlz.lol/dns-query
   fallback:
     - 43.155.100.143
-    - https://tlz.lol/dns-query
+    
 proxies:
   - {name: jp-us-1G, server: jp.tlz.asia, port: 12558, type: vmess, uuid: b0eb6e30-0557-4998-e1aa-e1bdbae0d4e5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us.tlz.asia}}, udp: true ,weight: 1}
   - {name: hk-V6-1G, server: hk.tlz.asia, port: 12020, type: vmess, uuid: 82d61a7e-ca3a-4f3d-c739-e145c0a24003, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shoutingtoutiao3.10010.com}}, udp: true ,weight: 1}
