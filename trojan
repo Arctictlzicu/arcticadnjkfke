@@ -19,6 +19,7 @@ proxies:
   - {name: hk-V6-1G, server: hk.tlz.asia, port: 12020, type: vmess, uuid: 82d61a7e-ca3a-4f3d-c739-e145c0a24003, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shoutingtoutiao3.10010.com}}, udp: true ,weight: 1}
   - {name: us-1G, server: us1.tlz.asia, port: 36839, type: vmess, uuid: d1921f76-4838-4db3-89a2-c8687fcf59b1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us1.tlz.asia}}, udp: true ,weight: 1}
   - {name: jp-1G, server: jp.tlz.asia, port: 8080, type: vmess, uuid: d8e0a70f-c6b1-4a3a-eb08-b00d9c757b5f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: jp.tlz.asia}}, udp: true ,weight: 1}
+  - {name: jp1-1G, server: jp1.tlz.asia, port: 48686, type: vmess, uuid: 81a56609-204b-44e0-e607-be0466fa12a7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: jp.tlz.asia}}, udp: true ,weight: 1}
   - {name: hk-1G, server: hk.tlz.asia, port: 8080, type: vmess, uuid: a6a2678c-181d-47da-c1d7-4609b35028c8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: hk.tlz.asia}}, udp: true ,weight: 1}
   - {name: dns-30mbps, server: dns.tlz.asia, port: 15819, type: vmess, uuid: 2a7c4f2d-3813-4e1d-b95a-191bfc37f376, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: dns.tlz.asia}}, udp: true ,weight: 2}
   - {name: amd-100mbps, server: amd.tlz.asia, port: 8080, type: vmess, uuid: 30fccf70-7d08-4cef-92c7-9f970bd7644a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: amd.tlz.asia}}, udp: true ,weight: 2} 
@@ -36,6 +37,7 @@ proxy-groups:
       - hk-V6-1G
       - us-1G
       - jp-1G
+      - jp1-1G
       - dns-30mbps
       - hk-1G
       - amd-100mbps
@@ -51,6 +53,7 @@ proxy-groups:
       - hk-V6-1G
       - us-1G
       - jp-1G
+      - jp1-1G
       - dns-30mbps
       - hk-1G
       - amd-100mbps
@@ -68,6 +71,7 @@ proxy-groups:
       - hk-V6-1G
       - us-1G
       - jp-1G
+      - jp1-1G
       - dns-30mbps
       - hk-1G
       - amd-100mbps
@@ -82,6 +86,7 @@ proxy-groups:
       - hk-V6-1G
       - us-1G
       - jp-1G
+      - jp1-1G
       - dns-30mbps
       - hk-1G
       - amd-100mbps
@@ -97,6 +102,7 @@ proxy-groups:
       - hk-V6-1G
       - us-1G
       - jp-1G
+      - jp1-1G
       - dns-30mbps
       - hk-1G
       - amd-100mbps
@@ -125,6 +131,7 @@ proxy-groups:
       - hk-V6-1G
       - us-1G
       - jp-1G
+      - jp1-1G
       - dns-30mbps
       - hk-1G
       - amd-100mbps
