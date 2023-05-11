@@ -16,7 +16,7 @@ dns:
     - 43.155.100.143
 proxies:
   - {name: jp2-10G, server: jp2.tlz.asia, port: 36845, type: vmess, uuid: 7aed8aae-5bf7-4f6c-e154-5f45e0c1132b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shoutingtoutiao3.10010.com}}, udp: true ,weight: 1}
-  - {name: jp-us1-1G, server: jp.tlz.asia, port: 12558, type: vmess, uuid: d1921f76-4838-4db3-89a2-c8687fcf59b1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shoutingtoutiao3.10010.com}}, udp: true ,weight: 1}
+  - {name: jp-us-1G, server: jp2.tlz.asia, port: 12558, type: vmess, uuid: d1921f76-4838-4db3-89a2-c8687fcf59b1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shoutingtoutiao3.10010.com}}, udp: true ,weight: 1}
   - {name: hk-V6-1G, server: hk.tlz.asia, port: 12020, type: vmess, uuid: 82d61a7e-ca3a-4f3d-c739-e145c0a24003, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shoutingtoutiao3.10010.com}}, udp: true ,weight: 1}
   - {name: us-1G, server: us1.tlz.asia, port: 36839, type: vmess, uuid: d1921f76-4838-4db3-89a2-c8687fcf59b1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shoutingtoutiao3.10010.com}}, udp: true ,weight: 1}
   - {name: jp-1G, server: jp.tlz.asia, port: 8080, type: vmess, uuid: d8e0a70f-c6b1-4a3a-eb08-b00d9c757b5f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shoutingtoutiao3.10010.com}}, udp: true ,weight: 1}
