@@ -35,7 +35,7 @@ proxy-groups:
       - 🔮 负载均衡
       - DIRECT
       - jp2-10G
-      - jp-us1-1G
+      - jp-us-1G
       - hk-V6-1G
       - us-1G
       - jp-1G
@@ -52,7 +52,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - jp2-10G
-      - jp-us1-1G
+      - jp-us-1G
       - hk-V6-1G
       - us-1G
       - jp-1G
@@ -71,7 +71,7 @@ proxy-groups:
       - 🔯 故障转移
       - 🔮 负载均衡
       - jp2-10G
-      - jp-us1-1G
+      - jp-us-1G
       - hk-V6-1G
       - us-1G
       - jp-1G
@@ -87,7 +87,7 @@ proxy-groups:
     interval: 180
     proxies:
       - jp2-10G
-      - jp-us1-1G
+      - jp-us-1G
       - hk-V6-1G
       - us-1G
       - jp-1G
@@ -104,7 +104,7 @@ proxy-groups:
     interval: 180
     proxies:
       - jp2-10G
-      - jp-us1-1G
+      - jp-us-1G
       - hk-V6-1G
       - us-1G
       - jp-1G
@@ -133,7 +133,7 @@ proxy-groups:
       - 🔯 故障转移
       - 🔮 负载均衡
       - jp2-10G
-      - jp-us1-1G
+      - jp-us-1G
       - hk-V6-1G
       - us-1G
       - jp-1G
