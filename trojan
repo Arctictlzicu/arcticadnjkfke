@@ -109,7 +109,6 @@ proxy-groups:
       - us-1G
       - jp-1G
       - jp1-1G
-      - dns-30mbps
       - hk-1G
       - amd-100mbps
       - V6-1G
