@@ -10,7 +10,7 @@ dns:
   ipv6: true
   listen: 0.0.0.0:5300
   nameserver:
-    - https://tlz.plus/dns-query
+    - http://tlz.plus/dns-query
     - https://tlz.lol/dns-query
   fallback:
     - 43.155.100.143
