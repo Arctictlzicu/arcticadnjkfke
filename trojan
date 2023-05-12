@@ -45,11 +45,25 @@ proxy-groups:
       - amd-100mbps
       - V6-1G
       - iplc-10mbps
-  - name: ♻️ 自动选择
+  - name: 🔮 负载均衡1
     type: url-test
+    strategy: consistent-hashing
     url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+    interval: 180
+    proxies:
+      - jp2-10G
+      - jp-us-1G
+      - hk-V6-1G
+      - us-1G
+      - jp-1G
+      - jp1-1G
+      - hk-1G
+      - V6-1G
+  - name: 🔮 负载均衡2
+    type: url-test
+    strategy: consistent-hashing
+    url: http://www.gstatic.com/generate_204
+    interval: 180
     proxies:
       - jp2-10G
       - jp-us-1G
@@ -81,6 +95,23 @@ proxy-groups:
       - amd-100mbps
       - V6-1G
       - iplc-10mbps
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - jp2-10G
+      - jp-us-1G
+      - hk-V6-1G
+      - us-1G
+      - jp-1G
+      - jp1-1G
+      - dns-30mbps
+      - hk-1G
+      - amd-100mbps
+      - V6-1G
+      - iplc-10mbps
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -97,22 +128,7 @@ proxy-groups:
       - amd-100mbps
       - V6-1G
       - iplc-10mbps
-  - name: 🔮 负载均衡
-    type: url-test
-    strategy: consistent-hashing
-    url: http://www.gstatic.com/generate_204
-    interval: 180
-    proxies:
-      - jp2-10G
-      - jp-us-1G
-      - hk-V6-1G
-      - us-1G
-      - jp-1G
-      - jp1-1G
-      - hk-1G
-      - amd-100mbps
-      - V6-1G
-      - iplc-10mbps
+
   - name: 🎯 全球直连
     type: select
     proxies:
